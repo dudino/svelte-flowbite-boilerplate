@@ -3,15 +3,14 @@
   import {page} from "$app/stores";
   import {base} from "$app/paths";
   import {DarkMode, Navbar, NavBrand, NavHamburger, NavLi, NavUl} from "flowbite-svelte";
-  import {GithubSolid} from "flowbite-svelte-icons";
+  import {FlowbiteSolid, GithubSolid} from "flowbite-svelte-icons";
   import ReusableModal from "$lib/components/ReusableModal.svelte";
 </script>
 <Navbar class="z-10" let:hidden let:toggle>
     <NavBrand>
         <DarkMode/>
-        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white pl-3">
-      <a href="{base}/">Svelte kit / Flowbite - starter </a>
-    </span>
+     <FlowbiteSolid class="text-primary-700 dark:text-primary-300 w-6 h-6"/>
+    <span class="font-bold text-lg dark:text-white">Massage Parlor System</span>
     </NavBrand>
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
