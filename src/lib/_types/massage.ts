@@ -13,6 +13,8 @@ export interface Schedule {
   masseuseId: string;
   availableFrom: string; // ISO date string
   availableTo: string;   // ISO date string
+  areaId: string;
+  roomId: string;
   approved: boolean;
 }
 
@@ -29,5 +31,11 @@ export interface Booking {
 export interface Area {
   id: string;
   name: string;
-  // Optionally, add more fields (location, description, etc)
+  rooms?: Room[];
+}
+
+export interface Room {
+  id: string;
+  name: string;
+  areaId: string;
 }
